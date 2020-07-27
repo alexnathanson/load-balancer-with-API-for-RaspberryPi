@@ -1,5 +1,5 @@
 #place this file in conf.d
-#add 'include conf.d/http;'' to the nginx.conf file
+#add 'include conf.d/http;' to the nginx.conf file
 #comment out the entire default http block in the nginx.conf file
 
 http {
@@ -17,10 +17,7 @@ http {
 			proxy_pass http://backend;
 		}
 
-		location /local {
-
-		}
-
+		#default directory for static html pages
 		location /html {
 
 		}
