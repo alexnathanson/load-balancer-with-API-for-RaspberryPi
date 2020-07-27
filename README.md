@@ -14,7 +14,10 @@ Config Instructions:
 ## NODE JS
 Based off of this tutorial: https://dev.to/guimg/how-to-serve-nodejs-applications-with-nginx-on-a-raspberry-jld
 
-* Move the entire 'api' directory to ?? 
+* Navigate to the api directory and install express
+	* npm init -y
+	* npm install express --save
+	 
 * To close port 3000 (the one that NodeJS is using to the public) configure the IP table by entering this in the terminal:
 	* iptables -A INPUT -p tcp -s localhost --dport 3000 -j ACCEPT
 	* iptables -A INPUT -p tcp --dport 3000 -j DROP
