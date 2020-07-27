@@ -1,0 +1,37 @@
+#place this file in conf.d
+#add 'include conf.d/http;'' to the nginx.conf file
+#comment out the entire default http block in the nginx.conf file
+
+http {
+	
+	upstream backend {
+
+		server SERVER1-IP;
+		server SERVER2-IP;
+	}
+
+	server {
+		root /var/www;
+
+		location / {
+			proxy_pass http://backend;
+		}
+
+		location /local {
+
+		}
+
+		location /html {
+
+		}
+
+		location /api {
+			proxy_pass http://localhost:3000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            #proxy_cache_bypass $http_upgrade;
+		}
+	}
+}
