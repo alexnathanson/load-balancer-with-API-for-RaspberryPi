@@ -14,12 +14,11 @@ Config Instructions:
 * comment out the entire default http block in the nginx.conf file
 
 ## API - NODE JS
-Based off of this tutorial: https://dev.to/guimg/how-to-serve-nodejs-applications-with-nginx-on-a-raspberry-jld
+Based off of these tutorials: https://dev.to/guimg/how-to-serve-nodejs-applications-with-nginx-on-a-raspberry-jld & https://codeforgeek.com/handle-get-post-request-express-4/
 
 * Navigate to the api directory and install express
 	* npm init -y
 	* npm install express --save
-For Post requests (https://codeforgeek.com/handle-get-post-request-express-4/)
 	* sudo npm install --save body-parser
 * To run once
 	* nodejs index.js
