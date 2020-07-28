@@ -11,16 +11,16 @@ http {
 	}
 
 	server {
-		root /var/www;
+
+        root /var/www/html;
 
 		location / {
 			proxy_pass http://backend;
 		}
 
 		#default directory for static html pages
-		location /html {
-
-		}
+		#location /local {
+		#}
 
 		location /api {
 			proxy_pass http://localhost:3000;
