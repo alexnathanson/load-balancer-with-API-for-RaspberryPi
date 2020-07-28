@@ -23,8 +23,8 @@ For Post requests (https://codeforgeek.com/handle-get-post-request-express-4/)
 	* sudo npm install --save body-parser
 * To run once
 	* nodejs index.js
-* To autorun
-	* TBD
+* To autorun add this to crontab -e
+	* @reboot sleep 30 && sh /home/pi/load-balancer-with-API-for-RaspberryPi/api/nodeRunner.sh > /home/pi/load-balancer-with-API-for-RaspberryPi/api/cronlog.log 2>&1
 
 * To close port 3000 to the public configure the IP table by entering this in the terminal:	
 	* sudo iptables -A INPUT -p tcp -s localhost --dport 3000 -j ACCEPT

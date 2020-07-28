@@ -22,6 +22,7 @@ router.post('ipUpdate',(request,response) => {
 });
 
 // add router in the Express app.
+// maybe this is where /api goes?
 app.use("/", router);
 
 
